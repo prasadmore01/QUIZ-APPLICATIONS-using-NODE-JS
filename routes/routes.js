@@ -31,6 +31,10 @@ const techMcqs = db.techMcq
 
 // INSERT A DATA INTO A DATABASE
 
+router.get("/addTechMcq",(req,res)=>{
+    res.sendFile(__dirname+"/public/addTechMcq.html")
+})
+
 router.post("/insertTechMcq",async(req,res)=>{
     const techM = new techMcqs(req.body)
     try{

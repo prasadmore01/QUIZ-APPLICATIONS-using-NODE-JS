@@ -6,7 +6,7 @@ const mcqSchema = new mongoose.Schema({
         type:String
     },
     options:{
-        type:String
+        type:Array
     },
     correct_answer:{
         type:String
