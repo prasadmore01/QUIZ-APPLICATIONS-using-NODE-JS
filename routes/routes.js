@@ -27,4 +27,20 @@ db.mongoose.connect(db.url,{
     process.exit()
 })
 
+const techMcqs = db.techMcq
+
+// INSERT A DATA INTO A DATABASE
+
+router.post("/insertTechMcq",async(req,res)=>{
+    const techM = new techMcqs(req.body)
+    try{
+        await techM.save()
+        res.send(techM)
+    }
+    catch(err){
+        res.status(500).send(err)
+    }
+})
+
+
 module.exports = router
