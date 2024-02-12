@@ -46,5 +46,34 @@ router.post("/insertTechMcq",async(req,res)=>{
     }
 })
 
+//GET A DATA FROM DATABASE
+
+router.get("/getTechMcq",async(req,res)=>{
+    try{
+        let response = await techMcqs.find().select({"_id":1,"question":1})
+        res.send(response)
+    }
+    catch{
+        res.send("Error Occured")
+    }
+})
+
+
+//DELETE A DATA FROM DATABASE
+
+router.get("/deleteTechMcq",(req,res)=>{
+    res.sendFile(__dirname+"/public/deleteTechMcq.html")
+})
+
+router.delete("/deleteTechMcq/:id",async(req,res)=>{
+    try{
+        let quid = req.params.id
+        let response = await techMcqs.findOneAndDelete({"_id":quid})
+        res.send("Record Deleted")
+    }
+    catch{
+        res.send("Errror Occured")
+    }
+})
 
 module.exports = router
