@@ -1,7 +1,11 @@
 const mongoose = require("mongoose")
+var AutoIncrement = require('mongoose-sequence')(mongoose);
 
 const mcqSchema = new mongoose.Schema({
-
+    qid:{
+        type:Number,
+        
+    },
     question:{
         type:String
     },
@@ -16,6 +20,8 @@ const mcqSchema = new mongoose.Schema({
     }
 })
 
-const techMcq = mongoose.model("techMcqData",mcqSchema,"techMcqTable")
+// const techMcq = mongoose.model("techMcqData",mcqSchema,"techMcqTable")
+techMcq.plugin(AutoIncrement, {id:'qid',inc_field: 'qid'});
+var techMcq = mongoose.model('techMcqData', mcqSchema,"techMcqTable");
 
 module.exports = techMcq;
