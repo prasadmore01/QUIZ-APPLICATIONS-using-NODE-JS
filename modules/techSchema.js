@@ -3,17 +3,22 @@ const mongoose = require("mongoose")
 const mcqSchema = new mongoose.Schema({
     qid:{
         type:Number,
+        required:true
     },
     question:{
-        type:String
+        type:String,
+        required:true
     },
     options:{
-        type:Array
+        type:Array,
+        required:true
     },
     correct_answer:{
-        type:String
+        type:String,
+        required:true
     },
     category:{
+        required:true,
         type:String
     }
 })
