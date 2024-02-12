@@ -4,21 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Tech MCQS</title>
+    <link rel="stylesheet" href="http://localhost:3000/techMcq/techMcqStyle">
 </head>
 <body>
+    
+    <div class="container">
+        <h1>Admin Panel</h1>
+    <div class="box">
     <form action="/techMcq/insertTechMcq" method="post">
-        Enter the Question : <input type="text" name="question"><br>
-        
-        Enter the MCQ Options : <Br> 
-                            <input type="text" name="options"><br>
-                            <input type="text" name="options"><br>
-                            <input type="text" name="options"><br>
-                            <input type="text" name="options"><br>
-
-        Enter the Correct Answer : <input type="text" name="correct_answer"><br>
-        Enter the Category : <input type="text" name="category"><br>
+ 
+        <input type="text" name="question" placeholder="Enter the Question "><br>
+       
+        <div class="options">
+            <input type="text" name="options" placeholder="1st MCQ Option">
+            <input type="text" name="options" placeholder="2nd MCQ Option"><Br>
+            <input type="text" name="options" placeholder="3rd MCQ Option">
+            <input type="text" name="options" placeholder="4th MCQ Option">
+        </div>
+        <input type="text" name="correct_answer" placeholder="Enter the Correct Answer :"><br>
+     
+        <input type="text" name="category" placeholder="Enter the Category :"><br>
         <input type="submit" value="Add into Tech Quiz"><br>
         
     </form>
+    </div>  
+</div>
 </body>
 </html>
