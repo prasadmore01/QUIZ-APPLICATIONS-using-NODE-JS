@@ -1,10 +1,7 @@
 const mongoose = require("mongoose")
 
 const mcqSchema = new mongoose.Schema({
-    qid:{
-        type:Number,
-        required:true
-    },
+  
     question:{
         type:String,
         required:true
