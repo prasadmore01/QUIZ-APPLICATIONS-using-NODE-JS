@@ -6,6 +6,8 @@ router.use(body.urlencoded({extended:false}))
 router.use(body.json())
 router.use(body.raw())
 
+const cors = require("cors")
+router.use(cors())
 //DATABASE CONNECTION
 
 const mongoose = require("mongoose")
@@ -54,8 +56,8 @@ router.post("/insertTechMcq",async(req,res)=>{
 
 router.get("/getTechMcq",async(req,res)=>{
     try{
-        let response = await techMcqs.find().select({"_id":1,"question":1})
-        res.send(response)
+        let response = await techMcqs.find().select({"_id":0,"question":1,"options":1,"correct_answer":1,"category":1})
+        res.json(response)
     }
     catch{
         res.send("Error Occured")
