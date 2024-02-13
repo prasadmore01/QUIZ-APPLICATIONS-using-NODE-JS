@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BrainStorm - Quiz Application</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <div class="container">
+        <h1>BrainStorm</h1>
+        <div class="box">
+
+            <h2>Start Now</h2>
+            <h4>Fill up the following details..!</h4>
+
+            <div class="form">
+                <input type="text" id="name" placeholder="Enter Your Name" required>
+                <h5 id="nameError"></h5>
+                <input type="email" id="email" placeholder="Enter Your Email Id" required>
+                <h5 id="emailError"></h5>
+                <select id="quiz-select">
+                    <option>Select the Quiz</option>
+                    <option>Technology</option>
+                    <option>Science</option>
+                    <option>Mathematics</option>
+                    <option>Fun & Entertainment</option>
+                </select>
+                <h5 id="quizError"></h5>
+                <button id="start-quiz">Start Now</button>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="./home.js"></script>
+</body>
+</html>
