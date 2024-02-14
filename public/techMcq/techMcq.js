@@ -1,4 +1,6 @@
 let div = document.getElementById("container")
+let quizSelectNew = document.getElementById("quiz-select").value
+
 let quizArr = []
 
 
@@ -22,23 +24,26 @@ quiz.onload=function(){
 }
 
 
+
 function display(){ 
+    console.log("Selected Quiz is "+quizSelectNew)    
     
-
     for(let i=0;i<10;i++){
+        if(quizArr[i].category == quizSelectNew){
 
-        let question = document.createElement("h3")
-        question.textContent = i+"] "+quizArr[i].question;
-        let mcqBox = document.createElement("div")
-        mcqBox.classList.add("mcqBox")
-        for(let j=0;j<4;j++){
-            let radios = document.createElement("div")
-            radios.innerHTML="<input type='radio' name='"+i+"'>"+quizArr[i].options[j]
-            question.appendChild(mcqBox)
-            mcqBox.appendChild(radios)
+            let question = document.createElement("h3")
+            question.textContent = i+"] "+quizArr[i].question;
+            let mcqBox = document.createElement("div")
+            mcqBox.classList.add("mcqBox")
+            for(let j=0;j<4;j++){
+                let radios = document.createElement("div")
+                radios.innerHTML="<input type='radio' name='"+i+"'>"+quizArr[i].options[j]
+                question.appendChild(mcqBox)
+                mcqBox.appendChild(radios)
+
         }
         
         div.appendChild(question)
-
+        }
     }
 }
