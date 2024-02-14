@@ -79,3 +79,25 @@ button:hover{
 
 
 /* QUIZ SELECT BOXES */
+
+.quiz-boxes{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.quiz-box{
+    width: 600px;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    background-color: aqua;
+    align-items: center;
+}
+
+.quiz-box img{
+    width: 40%;
+    
+}
