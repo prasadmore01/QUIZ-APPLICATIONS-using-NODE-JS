@@ -1,5 +1,5 @@
 let div = document.getElementById("container")
-let quizSelectNew = document.getElementById("quiz-select").value
+// let quizSelectNew = document.getElementById("quiz-select").value
 
 let quizArr = []
 
@@ -23,7 +23,20 @@ quiz.onload=function(){
     }
 }
 
+//SELECT QUIZ SCRIPT STARTS HERE 
 
+let quizBox = document.getElementsByClassName("quiz-box")
+let old_i = []
+for(let i=0;i<quizBox.length;i++){
+    quizBox[i].addEventListener("click",funSelect)
+    old_i.push(i)
+}
+
+function funSelect(){
+    let contentBox = document.getElementsByClassName("content")
+    
+    console.log("working")
+}
 
 function display(){ 
     console.log("Selected Quiz is "+quizSelectNew)    
