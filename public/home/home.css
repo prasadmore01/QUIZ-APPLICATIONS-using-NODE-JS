@@ -123,3 +123,17 @@ body{
     color: red;
     font-size: 15px;
 }
+
+h3{
+    margin-top: 30px;
+}
+
+a{
+    text-decoration: underline;
+    color: white;
+    transition-duration: 1s;
+}
+
+a:hover{
+    color: aqua;
+}
