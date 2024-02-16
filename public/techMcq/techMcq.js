@@ -25,14 +25,16 @@ quiz.onload=function(){
 
 //SELECT QUIZ SCRIPT STARTS HERE 
 
-let quizBox = document.getElementsByClassName("quiz-box")
+let quizBox = document.querySelectorAll(".quiz-box")
 let old_i = []
 for(let i=0;i<quizBox.length;i++){
     quizBox[i].addEventListener("click",funSelect)
-    old_i.push(i)
 }
 
-function funSelect(){
+
+function funSelect(names){
+    console.log(names)
+    console.log(names.dataset.title)
     let contentBox = document.getElementsByClassName("content")
     
     console.log("working")
