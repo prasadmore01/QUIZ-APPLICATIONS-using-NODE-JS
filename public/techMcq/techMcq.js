@@ -1,3 +1,5 @@
+
+
 let div = document.getElementById("container")
 // let quizSelectNew = document.getElementById("quiz-select").value
 
@@ -19,7 +21,7 @@ quiz.onload=function(){
         for(let i=0;i<arr.length;i++){
             quizArr.push(arr[i])
         }
-        display()
+        // display()
     }
 }
 
@@ -32,33 +34,34 @@ for(let i=0;i<quizBox.length;i++){
 }
 
 
-function funSelect(names){
-    console.log(names)
-    console.log(names.dataset.title)
-    let contentBox = document.getElementsByClassName("content")
+function funSelect(e){
+
+    let content = e.target.parentNode
     
-    console.log("working")
+    console.log(content.firstElementChild.innerText)
+
+ 
 }
 
-function display(){ 
-    console.log("Selected Quiz is "+quizSelectNew)    
+// function display(){ 
+//     console.log("Selected Quiz is "+quizSelectNew)    
     
-    for(let i=0;i<10;i++){
-        if(quizArr[i].category == quizSelectNew){
+//     for(let i=0;i<10;i++){
+//         if(quizArr[i].category == quizSelectNew){
 
-            let question = document.createElement("h3")
-            question.textContent = i+"] "+quizArr[i].question;
-            let mcqBox = document.createElement("div")
-            mcqBox.classList.add("mcqBox")
-            for(let j=0;j<4;j++){
-                let radios = document.createElement("div")
-                radios.innerHTML="<input type='radio' name='"+i+"'>"+quizArr[i].options[j]
-                question.appendChild(mcqBox)
-                mcqBox.appendChild(radios)
+//             let question = document.createElement("h3")
+//             question.textContent = i+"] "+quizArr[i].question;
+//             let mcqBox = document.createElement("div")
+//             mcqBox.classList.add("mcqBox")
+//             for(let j=0;j<4;j++){
+//                 let radios = document.createElement("div")
+//                 radios.innerHTML="<input type='radio' name='"+i+"'>"+quizArr[i].options[j]
+//                 question.appendChild(mcqBox)
+//                 mcqBox.appendChild(radios)
 
-        }
+//         }
         
-        div.appendChild(question)
-        }
-    }
-}
+//         div.appendChild(question)
+//         }
+//     }
+// }
