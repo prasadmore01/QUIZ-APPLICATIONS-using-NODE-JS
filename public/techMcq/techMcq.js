@@ -28,20 +28,24 @@ quiz.onload=function(){
 //SELECT QUIZ SCRIPT STARTS HERE 
 
 let quizBox = document.querySelectorAll(".quiz-box")
-let old_i = []
+let quizHeadArray = []
 for(let i=0;i<quizBox.length;i++){
-    quizBox[i].addEventListener("click",funSelect)
+    quizBox[i].addEventListener("click",()=>{
+
+        let quizHeading = quizBox[i].lastElementChild.firstElementChild.textContent
+        console.log(quizHeading)
+    })
 }
 
 
-function funSelect(e){
+// function funSelect(e){
 
-    let content = e.target.parentNode
-    
-    console.log(content.firstElementChild.innerText)
+//     let content = e.target.parentNode
+//     console.log(content.firstElementChild.innerText)
+//     console.log(quizBox.parentNode)
 
  
-}
+// }
 
 // function display(){ 
 //     console.log("Selected Quiz is "+quizSelectNew)    
