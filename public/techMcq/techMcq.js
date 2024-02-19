@@ -34,38 +34,32 @@ for(let i=0;i<quizBox.length;i++){
 
         let quizHeading = quizBox[i].lastElementChild.firstElementChild.textContent
         console.log(quizHeading)
+        quizHeadArray.push(quizHeading)
+        display()
     })
 }
 
 
-// function funSelect(e){
 
-//     let content = e.target.parentNode
-//     console.log(content.firstElementChild.innerText)
-//     console.log(quizBox.parentNode)
-
- 
-// }
-
-// function display(){ 
-//     console.log("Selected Quiz is "+quizSelectNew)    
+function display(){ 
+   console.log("Selected Quiz is "+quizHeadArray[0])    
     
-//     for(let i=0;i<10;i++){
-//         if(quizArr[i].category == quizSelectNew){
+    for(let i=0;i<10;i++){
+        if(quizArr[i].category == quizHeadArray[0]){
 
-//             let question = document.createElement("h3")
-//             question.textContent = i+"] "+quizArr[i].question;
-//             let mcqBox = document.createElement("div")
-//             mcqBox.classList.add("mcqBox")
-//             for(let j=0;j<4;j++){
-//                 let radios = document.createElement("div")
-//                 radios.innerHTML="<input type='radio' name='"+i+"'>"+quizArr[i].options[j]
-//                 question.appendChild(mcqBox)
-//                 mcqBox.appendChild(radios)
+            let question = document.createElement("h3")
+            question.textContent = i+"] "+quizArr[i].question;
+            let mcqBox = document.createElement("div")
+            mcqBox.classList.add("mcqBox")
+            for(let j=0;j<4;j++){
+                let radios = document.createElement("div")
+                radios.innerHTML="<input type='radio' name='"+i+"'>"+quizArr[i].options[j]
+                question.appendChild(mcqBox)
+                mcqBox.appendChild(radios)
 
-//         }
+        }
         
-//         div.appendChild(question)
-//         }
-//     }
-// }
+        div.appendChild(question)
+        }
+    }
+}
