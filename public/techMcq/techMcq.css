@@ -15,9 +15,14 @@ h1{
     font-size: 40px;
     color: rgb(200, 141, 255);
     padding: 0px;
-    margin-bottom: 30px;
+    margin-top: 20px;
 }
 
+h2{
+    color: rgb(172, 82, 255);
+    padding: 0px;
+    text-decoration: underline;
+}
 #container{
     width: 70%;
     text-align: left;
@@ -50,10 +55,14 @@ input{
 }
 input[type=radio] {
 
-    width: 20px;
-    height: 16px;
+    width: 30px;
+    height: 18px;
     margin-right: 10px;
    
+}
+
+input[type=radio]:hover{
+    cursor: pointer;
 }
 
 button{
