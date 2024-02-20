@@ -21,19 +21,19 @@ quiz.onload=function(){
         for(let i=0;i<arr.length;i++){
             quizArr.push(arr[i])
         }
-      
+      display()
     }
 }
 
 
 function display(){ 
-   console.log("Selected Quiz is "+quizHeadArray[0])    
+ 
     
     for(let i=0;i<10;i++){
-        if(quizArr[i].category == quizHeadArray[0]){
+       
 
             let question = document.createElement("h3")
-            question.textContent = i+"] "+quizArr[i].question;
+            question.textContent = (i+1)+"] "+quizArr[i].question;
             let mcqBox = document.createElement("div")
             mcqBox.classList.add("mcqBox")
             for(let j=0;j<4;j++){
@@ -47,4 +47,3 @@ function display(){
         div.appendChild(question)
         }
     }
-}
