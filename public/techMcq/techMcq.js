@@ -21,24 +21,9 @@ quiz.onload=function(){
         for(let i=0;i<arr.length;i++){
             quizArr.push(arr[i])
         }
-        // display()
+      
     }
 }
-
-//SELECT QUIZ SCRIPT STARTS HERE 
-
-let quizBox = document.querySelectorAll(".quiz-box")
-let quizHeadArray = []
-for(let i=0;i<quizBox.length;i++){
-    quizBox[i].addEventListener("click",()=>{
-
-        let quizHeading = quizBox[i].lastElementChild.firstElementChild.textContent
-        console.log(quizHeading)
-        quizHeadArray.push(quizHeading)
-        display()
-    })
-}
-
 
 
 function display(){ 

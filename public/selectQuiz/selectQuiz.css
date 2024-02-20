@@ -1,0 +1,139 @@
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0px;
+    padding: 0px;    
+}
+
+body{
+    background-color: rgb(24, 23, 23);
+    padding:0px 0px 50px 0px;
+    text-align: center;
+    padding: 30px;
+}
+
+h1{
+    text-align: center;
+    font-size: 40px;
+    color: rgb(200, 141, 255);
+    padding: 0px;
+    margin-bottom: 30px;
+}
+
+#container{
+    width: 70%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 30px;
+
+}
+
+h3{
+    font-size: 20px;
+    line-height: 35px;
+    background-color: rgb(20, 20, 51);
+    color: white;
+    padding: 20px;
+    border-radius:20px;
+    box-shadow: rgba(228, 228, 228, 0.12) 0px 2px 4px 0px, rgba(211, 211, 211, 0.32) 0px 2px 16px 0px;
+}
+input{
+    margin-left: 20px;
+}
+
+.mcqBox{
+    margin-top: 10px;
+
+}
+input[type=radio] {
+
+    width: 20px;
+    height: 16px;
+    margin-right: 10px;
+   
+}
+
+button{
+    width: 300px;
+    font-size: 20px;
+    padding: 15px;
+    font-weight: 700;
+    color: white;
+    background-color: blueviolet;
+    border-radius: 100px;
+    border: none;
+    margin-top: 20px;
+    transition-duration: 1s;
+    box-shadow: rgba(120, 46, 240, 0.4) 5px 5px, rgba(56, 86, 255, 0.3) 10px 10px, rgba(130, 46, 240, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
+    transition-duration: 1s;
+   
+
+}
+
+button:hover{
+    cursor: pointer;
+    box-shadow: none
+}
+
+
+/* QUIZ SELECT BOXES */
+
+.quiz-boxes{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    color: white;
+}
+
+.quiz-box{
+    width: 90vmin;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    border: 1px solid grey;
+    border-radius: 20px;
+    box-shadow: rgba(194, 194, 194, 0.19) 0px 10px 20px, rgba(179, 179, 179, 0.23) 0px 6px 6px;
+    transition-duration: 1s;
+    margin: 10px;
+}
+
+.quiz-box:hover{
+    border: 1px solid blueviolet;
+    cursor: pointer;
+    box-shadow: rgba(230, 39, 255, 0.19) 0px 10px 20px, rgba(247, 19, 255, 0.23) 0px 6px 6px;
+    
+}
+
+.quiz-box:active{
+    background-color: aqua;
+}
+
+.quiz-box .content{
+    padding: 5px;
+}
+
+.quiz-box h2{
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+.quiz-box p{
+    text-align: left;
+}
+
+.quiz-box img{
+    width: 40%;
+    height: 100%;
+    border-radius: 20px 0px 0px 20px;
+}
+
+#startQuiz{
+    margin-top: 60px;
+}
