@@ -31,22 +31,22 @@ quiz.onload=function(){
 function display(){ 
  
     
+   
     for(let i=0;i<10;i++){
-
-
-            let question = document.createElement("h3")
-            question.textContent = (i+1)+"] "+quizArr[i].question;
+            let random = Math.floor((Math.random() * 10))
+            let question =  document.createElement("h3")
+            question.textContent = (i+1)+"] "+quizArr[random].question;
             let mcqBox = document.createElement("div")
             mcqBox.classList.add("mcqBox")
             for(let j=0;j<4;j++){
                 let radios = document.createElement("div")
-                radios.innerHTML="<input type='radio' name='"+i+"'>"+quizArr[i].options[j]
+                radios.innerHTML="<input type='radio' name='"+i+"'>"+quizArr[random].options[j]
                 question.appendChild(mcqBox)
                 mcqBox.appendChild(radios)
 
             }
             
-        let cans = quizArr[i].correct_answer
+        let cans = quizArr[random].correct_answer
         correctAns.push(cans)
            
            
