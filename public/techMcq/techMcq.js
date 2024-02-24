@@ -123,3 +123,13 @@ function correctAnswers(){
  }
  
  }
+
+ //AFTER SUBMIT POPUP
+
+let popup = document.getElementById("popup")
+let divPop = document.createElement("div")
+let ansH1 = document.createElement("h1")
+ansH1.innerHTML = count + " Answers are Correct out of 10 & you got "+count*10+"% out of 100"
+
+divPop.append(ansH1)
+popup.append(divPop)
