@@ -66,35 +66,35 @@ function display(){
  setTimeout(()=>{
     //  window.alert(count + " Answers are Correct out of 10 & you got "+count*10+"% out of 100")
 
-     let popup = document.getElementById("popup")
-let divPop = document.createElement("div")
-let ansH1 = document.createElement("h1")
-ansH1.innerHTML = count + " Answers are Correct out of 10 & you got "+count*10+"% out of 100"
+    let popup = document.getElementById("popup")
+    popup.style.display="block"
+    let divPop = document.createElement("div")
+    let ansH1 = document.createElement("h1")
+    ansH1.innerHTML = count + " Answers are Correct out of 10 & you got "+count*10+"% out of 100"
 
-divPop.append(ansH1)
-popup.append(divPop)
+    divPop.append(ansH1)
+    popup.append(divPop)
 
-if(count >= 8){
-    let congrats = document.createElement("h2")
-    congrats.innerHTML = "Congratulations! You Got Good Marks"
-    divPop.append(congrats)
-} else if ( count >= 5 && count < 8){
-    let congrats = document.createElement("h2")
-    congrats.innerHTML = "Congratulations! You are Passed,but you need to Work Hard!"
-    divPop.append(congrats)
+    if(count >= 8){
+        let congrats = document.createElement("h2")
+        congrats.innerHTML = "🤩Congratulations! You Got Good Marks 🎉🥳"
+        divPop.append(congrats)
+    } else if ( count >= 5 && count < 8){
+        let congrats = document.createElement("h2")
+        congrats.innerHTML = "😊Congratulations! You are Passed,but you need to Work Hard!✍"
+        divPop.append(congrats)
 
-} else {
-    let congrats = document.createElement("h2")
-    congrats.innerHTML = "You are Failed! You need to dedicate all time to Study!"
-    divPop.append(congrats)
+    } else {
+        let congrats = document.createElement("h2")
+        congrats.innerHTML = "😔You are Failed! You need to dedicate all time to Study!📚"
+        congrats.style.color="rgb(255, 43, 43)"
+        divPop.append(congrats)
 
-}
+    }
 
  },400)
  
-             //  let correctAnswer = quizArray.
-             
-             
+                        
  submitCount++;
 
 }

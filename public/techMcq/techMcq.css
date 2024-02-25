@@ -8,6 +8,7 @@ body{
     background-color: rgb(24, 23, 23);
     padding:0px 0px 50px 0px;
     text-align: center;
+    position: relative;
 }
 
 #logo{
@@ -150,4 +151,23 @@ button:hover{
 
 #startQuiz{
     margin-top: 60px;
+}
+
+/* POPUP DESIGNING */
+
+#popup{
+    margin: 50px auto;
+    width:500px;
+    height:auto;
+    display: none;
+    padding: 20px;
+    background-color: rgb(20, 20, 51);
+    border-radius: 20px;
+    box-shadow: rgba(228, 228, 228, 0.12) 0px 2px 4px 0px, rgba(211, 211, 211, 0.32) 0px 2px 16px 0px;
+
+}
+
+#popup h1{
+    color: rgb(255, 255, 255);
+
 }
