@@ -30,29 +30,38 @@ quiz.onload=function(){
 
 function display(){ 
  
-    
-   
+    let arr = []
+    let random = []
     for(let i=0;i<10;i++){
-            let random = Math.floor((Math.random() * 10))
+        arr.push(i)
+    }
+    const shuffledArray = arr.sort((a, b) => 0.5 - Math.random());
+
+    for(let i=0;i<10;i++){
+          
+            let randomNo = shuffledArray[i] 
             let question =  document.createElement("h3")
-            question.textContent = (i+1)+"] "+quizArr[random].question;
+            question.textContent = (i+1)+"] "+ quizArr[randomNo].question;
             let mcqBox = document.createElement("div")
             mcqBox.classList.add("mcqBox")
             for(let j=0;j<4;j++){
                 let radios = document.createElement("div")
-                radios.innerHTML="<input type='radio' name='"+i+"'>"+quizArr[random].options[j]
+                radios.innerHTML="<input type='radio' name='"+i+"'>"+quizArr[randomNo].options[j]
                 question.appendChild(mcqBox)
                 mcqBox.appendChild(radios)
 
             }
             
-        let cans = quizArr[random].correct_answer
+        let cans = quizArr[randomNo].correct_answer
         correctAns.push(cans)
            
            
         div.appendChild(question)
+ 
+
         }
-    }
+     }
+
 
 
     //--------------------------------------------------------- After Submit Quiz
@@ -93,8 +102,7 @@ function display(){
     }
 
  },400)
- 
-                        
+
  submitCount++;
 
 }
@@ -148,5 +156,4 @@ function correctAnswers(){
  
  }
 
- //AFTER SUBMIT POPUP
 
