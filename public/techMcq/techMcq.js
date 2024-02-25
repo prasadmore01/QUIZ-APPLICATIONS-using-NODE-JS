@@ -73,10 +73,10 @@ function display(){
  correctAnswers()
  
  setTimeout(()=>{
-    //  window.alert(count + " Answers are Correct out of 10 & you got "+count*10+"% out of 100")
-
+    
     let popup = document.getElementById("popup")
     popup.style.display="block"
+
     let divPop = document.createElement("div")
     let ansH1 = document.createElement("h1")
     ansH1.innerHTML = count + " Answers are Correct out of 10 & you got "+count*10+"% out of 100"
@@ -104,6 +104,10 @@ function display(){
  },400)
 
  submitCount++;
+
+ setTimeout(()=>{
+    window.scrollTo(0, 3000);
+ },500)
 
 }
 
