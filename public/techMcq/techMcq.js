@@ -9,7 +9,7 @@ let quizArr = []
 let correctAns = []
 
 const quiz = new XMLHttpRequest()
-let path = "http://localhost:3000/techMcq/getTechMcq"
+let path = "http://localhost:3000/brainstorm/getTechMcq"
 
 quiz.open("get",path)
 
