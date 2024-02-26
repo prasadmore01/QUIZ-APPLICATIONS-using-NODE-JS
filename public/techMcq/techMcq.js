@@ -20,9 +20,10 @@ quiz.onload=function(){
         let response = this.responseText
 
         let arr = JSON.parse(response)
-        console.log(arr)
-        for(let i=0;i<arr.length;i++){
-            quizArr.push(arr[i])
+        let techArr = arr.Technology
+        console.log(techArr)
+        for(let i=0;i<techArr.length;i++){
+            quizArr.push(techArr[i])
         }
       display()
     }
