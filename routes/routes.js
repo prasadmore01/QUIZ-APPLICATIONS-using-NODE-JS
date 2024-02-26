@@ -57,8 +57,16 @@ router.post("/insertTechMcq",async(req,res)=>{
 
 router.get("/getTechMcq",async(req,res)=>{
     try{
-        let response = await techMcqs.find().select({"_id":0,"question":1,"options":1,"correct_answer":1,"category":1})
-        res.json(response)
+        // let response = await techMcqs.find().select({"_id":0,"question":1,"options":1,"correct_answer":1,"category":1})
+        let techCate = await techMcqs.find({"category":"technology"})
+        let sciCate = await techMcqs.find({"category":"science"})
+        let mathsCate = await techMcqs.find({"category":"mathematics"})
+        let historyCate = await techMcqs.find({"category":"history"})
+        let computerCate = await techMcqs.find({"category":"computer"})
+        let geographyCate = await techMcqs.find({"category":"geography"})
+        let result = {"Technology":techCate,"Science":sciCate,"Mathematics":mathsCate,"History":historyCate,"Computer":computerCate,"Geography":geographyCate}
+        res.json(result)
+
     }
     catch{
         res.send("Error Occured")
