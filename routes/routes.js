@@ -44,6 +44,7 @@ router.get("/techMcqStyle",(req,res)=>{
 router.post("/insertTechMcq",async(req,res)=>{
     const techM = new techMcqs(req.body)
     try{
+
         await techM.save()
         res.send(techM)
     }
