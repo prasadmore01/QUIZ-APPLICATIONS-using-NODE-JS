@@ -135,6 +135,7 @@ function correctAnswers(){
              if(mcqOptions[i].checked){
                  let selectedValue = mcqOptions[i].parentNode.firstChild.nextSibling.nodeValue;
                  
+                    
                  if(selectedValue == quizArr[j].correct_answer){
                      console.log("Answer is Correct")
                      count++
