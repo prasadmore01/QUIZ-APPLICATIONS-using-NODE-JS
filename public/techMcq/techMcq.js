@@ -20,6 +20,7 @@ quiz.onload=function(){
         let response = this.responseText
 
         let arr = JSON.parse(response)
+        console.log(arr)
         let techArr = arr.Technology
         console.log(techArr)
         for(let i=0;i<techArr.length;i++){
