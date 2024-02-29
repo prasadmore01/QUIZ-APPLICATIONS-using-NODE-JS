@@ -26,10 +26,20 @@
         <input type="text" name="correct_answer" placeholder="Enter the Correct Answer :"><br>
      
         <input type="text" name="category" placeholder="Enter the Category :"><br>
-        <input type="submit" value="Add into Quiz"><br>
-        
+        <input type="submit" value="Add into Quiz" id="submitId"><br>
+        <span id="ansText"></span>
     </form>
     </div>  
 </div>
+
+    <script>
+        let submitId = document.getElementById("submitId")
+        let ansText = document.getElementById("ansText")
+
+        submitId.addEventListener("submit",()=>{
+            ansText.innerHTML="<h3>Quiz Question Added Successfully!</h3>"
+        })
+
+    </script>
 </body>
 </html>
