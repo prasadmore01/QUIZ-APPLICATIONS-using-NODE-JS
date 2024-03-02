@@ -41,6 +41,7 @@ router.get("/techMcqStyle",(req,res)=>{
     res.sendFile(__dirname+"/public/addTechMcq.css")
 })
 
+//Created Post method here
 router.post("/insertTechMcq",async(req,res)=>{
     const techM = new techMcqs(req.body)
     try{
