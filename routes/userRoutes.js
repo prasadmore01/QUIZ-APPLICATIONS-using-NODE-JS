@@ -13,7 +13,7 @@ mongoose.Promise = global.Promise
 
 const db = {}
 db.mongoose = mongoose
-db.url = "mongodb://127.0.0.1:27017/users"
+db.url = "mongodb://127.0.0.1:27017/techMcq"
 db.users = users
 db.mongoose.connect(db.url,{
     useNewUrlParser:true,
