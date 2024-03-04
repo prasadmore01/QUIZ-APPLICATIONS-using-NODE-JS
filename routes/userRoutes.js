@@ -19,7 +19,7 @@ db.mongoose.connect(db.url,{
     useNewUrlParser:true,
     useUnifiedTopology:true
 }).then(()=>{
-    console.log("Database Connected!")
+    console.log("Users Database is Successfully Connected!")
 }).catch(err=>{
     console.log("Error Occured!")
     
