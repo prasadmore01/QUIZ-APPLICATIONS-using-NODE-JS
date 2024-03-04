@@ -12,4 +12,6 @@ let userSchema = new mongoose.Schema({
     }
 })
 
-let users = mongoose.model("userModel",userSchema,usersTable)
+let users = mongoose.model("userModel",userSchema,"usersTable")
+
+module.exports = users
