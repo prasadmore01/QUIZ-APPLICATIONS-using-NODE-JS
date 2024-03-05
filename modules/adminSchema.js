@@ -14,4 +14,4 @@ let adminSchema = mongoose.Schema({
 
 let admin = mongoose.model("adminModel",adminSchema,"adminTable")
 
-modules.export = admin
+module.exports = admin
