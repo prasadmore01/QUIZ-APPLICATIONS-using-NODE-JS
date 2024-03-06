@@ -26,4 +26,14 @@ db.mongoose.connect(db.url,{
     console.log("Error Occured!")
 })
 
+let admins = db.admin
+//GET ADMINS
+
+router.get("/getAdmins",async(req,res)=>{
+    try{
+        let response = await admins.find().select({_id:0,__v:0})
+    } catch {
+        console.log("Error Occured!")
+    }
+})
 module.exports = router
